@@ -1,0 +1,22 @@
+.neightbor{
+	font-family: sans;
+	position: relative;
+	width: 100%;
+	outline: none;
+	background-color: white;
+	color: black;
+	box-shadow: 0px 1px 20px 1px rgba(0,0,0,0.50);
+
+	.navbar{
+
+		.collapse{
+			
+			.form-inline{
+				
+				.input{
+					box-shadow: 0px 2px 20px 1px rgba(0,0,0,0.50);
+				}
+			}
+		}
+	}
+}

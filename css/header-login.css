@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Avengeance";
+  font-style: normal;
+  font-weight: normal;
+  src: local("?"), url("../fonts/1/AVENGEANCE.ttf") format("ttf"), url("../fonts/1/AVENGEANCE.ttf") format("truetype"); }
+.degrade {
+  background-color: #B71C1C;
+  padding: 30px 0; }
+  .degrade .header-login {
+    font-family: sans;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    background: #cc1617 no-repeat center center;
+    background-attachment: scroll;
+    background-size: cover;
+    color: white;
+    height: 400px;
+    width: 100%; }
+    .degrade .header-login .h1-header {
+      width: 350px;
+      height: 120px;
+      overflow: hidden; }
+      .degrade .header-login .h1-header ul {
+        animation: rotacion 20s infinite; }
+      .degrade .header-login .h1-header ul, .degrade .header-login .h1-header li {
+        width: 100%;
+        list-style: none;
+        text-align: center;
+        font-family: 'Avengeance';
+        font-size: 90px;
+        text-align: center; }
+
+@keyframes rotacion {
+  0% {
+    margin-top: 20px; }
+  20% {
+    margin-top: 20px; }
+  25% {
+    margin-top: -110px; }
+  40% {
+    margin-top: -110px; }
+  45% {
+    margin-top: -240px; }
+  60% {
+    margin-top: -240px; }
+  65% {
+    margin-top: -110px; }
+  80% {
+    margin-top: -110px; }
+  85% {
+    margin-top: 20px; }
+  100% {
+    margin-top: 20px; } }
+
+/*# sourceMappingURL=header-login.css.map */

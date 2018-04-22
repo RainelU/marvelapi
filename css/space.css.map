@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAgB;EACf,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,MAAM;EAClB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EAEvB,yBAAQ;IACP,OAAO,EAAE,IAAI;IAIZ,wCAAE;MACD,SAAS,EAAE,IAAI",
+"sources": ["../sass/space.scss"],
+"names": [],
+"file": "space.css"
+}

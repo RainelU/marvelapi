@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Marvel API</title>
+	<link rel="shortcut icon" type="text/css" href="./img/Mattahan-Ultrabuuf-Comics-Captain-America-Shield.ico">
+	<link rel="stylesheet" type="text/css" href="./css/import.css">
+	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="bodychild">
+		<div class="bodycontainer">
+			<div class="nav-top">
+				<div class="marvel-logo">
+					<img src="./img/marvel.svg" width="200" height="80">
+				</div>
+			</div>
+			<div class="neightbor">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light fixed">
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">More Us</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Interactive
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="#">Series</a>
+									<a class="dropdown-item" href="#">Movies</a>
+									<a class="dropdown-item" href="#">Forum</a>
+								</div>
+							</li>
+						</ul>
+						<form class="form-inline my-2 my-lg-0">
+							<input class="form-control mr-sm-2 input" type="search" placeholder="Search" aria-label="Search">
+							<button class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
+						</form>
+					</div>
+				</nav>
+			</div>
+			<div class="header">
+				<div class="contenedor">
+					<div class="skew-box"></div>
+					<div class="text-cont">
+						<span>THE BETTER STUFF WHIT</span>
+						<br>
+						<span>THE WORLD OF COMIC'S</span>
+						<br>
+						<div class="flex">	
+							<button><label>Read more</label></button>
+							<div class="btn-flex">
+								<button class="btn-register" data-toggle="modal" data-target="#Register">
+									SIGN UP
+								</button>
+								<button class="btn-login" data-toggle="modal" data-target="#Login">
+									LOG IN
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid container">
+				<div class="row padding">
+					<div class="col-sm-4 margin-top">
+						<h2>¡Bienvenido!</h2>
+						<p>Acerca de nosotros somos una gama de desarrolladores web (nuestro fuerte), empleados para mejor interactividad en el Desarrollo.</p>
+					</div>
+					<div class="col-sm-4 margin-top">
+						<h2>¡Asombra!</h2>
+						<p>Tenemos un proyecto basado en la interactividad y estilo en el que daremos a una página, espero te guste como esté quedando esta page.</p>
+					</div>
+					<div class="col-sm-4 margin-top">
+						<h2>¡Responsivo!</h2>
+						<p> Es adaptable a todo teléfono móvil, sea cual sea el tamaño de su pantalla. Será compatible. Así tendrémos mayor gama en visitas.</p>
+					</div>
+				</div>
+			</div>
+			<div class="degrade">
+				<div class="header-login">
+					<div class="h1-header">
+						<ul>
+							<li>We Are</li>
+							<li>We Love</li>
+							<li>MARVEL</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="Register" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog center" role="document">
+			<div class="modal-content">
+				<button type="button" class="close X-close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+
+				<div class="modal-body">
+					<form class="form" role="form">
+						<div class="div-inp-name left-addon" style="display: flex; flex-wrap: wrap;">
+							<i class="fa fa-user i-conf"></i>
+							<input type="text" placeholder="Username" name="name-reg" class="inp-name" id="name-reg" required>
+							<div class="" id="div-label-name">
+								
+							</div>
+						</div>
+						<div class="div-inp-name left-addon" style="display: flex; flex-wrap: wrap;">
+							<i class="fa fa-inbox i-conf"></i>
+							<input type="email" placeholder="Email" name="email-reg" class="inp-name" id="email-reg" required>
+							<div id="div-label-email"></div>
+						</div>
+						<div class="div-inp-pass left-addon">
+							<i class="fa fa-key"></i>
+							<input type="password" placeholder="Password" name="pass-reg" class="inp-pass" id="pass-reg" required>
+							<div id="div-label-pass"></div>
+						</div>
+						<div class="div-inp-pass left-addon">
+							<i class="fa fa-key"></i>
+							<input type="password" placeholder="Confirm Password" id="confirmpass-reg" name="confirmpass-reg" class="inp-confirmpass" required>
+							<div id="div-label-confirmpass"></div>
+						</div>
+						<div class="form-btn">
+							<button class="btn-login" id="btn-register">CREATE ACCOUNT</button>
+						</div>
+
+						<div class="social-btn">
+							<button class="btn-facebook"><i class="fa fa-facebook"></i><a href="https://www.facebook.com"> FACEBOOK</a></button>
+							<button class="btn-google"><i class="fa fa-google"></i><a href="https://google.co.ve"> GOOGLE</a></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade"id="Login" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog center" role="document">
+              <div class="modal-content">
+                  <button type="button" class="close X-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                <div class="modal-body">
+                	<div id="welcome-admin"></div>
+                  <form class="form" role="form">
+                  	<div class="div-inp-name left-addon" style="display: flex; flex-wrap: wrap;">
+        				<i class="fa fa-user i-conf"></i>
+                  		<input type="text" placeholder="Ingress name..." class="inp-name" id="name-login">
+                  		<div id="div-name-login"></div>
+                  	</div>
+                  	<div class="div-inp-pass left-addon">
+                  		<i class="fa fa-key"></i>
+                  		<input type="password" placeholder="Ingress password..." class="inp-pass" id="pass-login">
+                  		<div id="div-pass-login"></div>
+                  	</div>
+                  	<div class="form-btn">
+                  		<button class="btn-login" id="btn-login">LOG IN</button>
+                  	</div>
+                  	<div class="social-btn">
+						<button class="btn-facebook"><i class="fa fa-facebook"></i><a href="https://www.facebook.com"> FACEBOOK</a></button>
+						<button class="btn-google"><i class="fa fa-google"></i><a href="https://google.co.ve"> GOOGLE</a></button>
+					</div>
+    				<a href="#" class="a-createacc">CREATE ACCOUNT</a>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+	<script src="./bootstrap/js/jquery-3.3.1.min.js"></script>
+	<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./bootstrap/js/popper.min.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>

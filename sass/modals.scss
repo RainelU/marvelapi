@@ -1,0 +1,217 @@
+.modal{
+	.modal-dialog {
+		margin-top:0;
+		position: relative;
+		width: 100%;
+		pointer-events: none;
+	}
+
+	.modal.fade .modal-dialog {
+		transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		-webkit-transform: translate(0, 0%);
+		transform: translate(0, 0%);
+	}
+
+	.center{
+
+		.modal-content{
+			box-shadow: 0px 1px 20px 1px rgba(0,0,0,0.50);
+			border-radius: 10%; 
+			font-family: sans;
+			background-color: rgba(31,31,44,1);
+
+			.X-close{
+				color: white;
+				font-size: 30px;
+				padding: 20px;
+				position: absolute;
+				z-index: 1;
+				outline: none;
+				right: 20px;
+			}
+
+			.modal-body{ 
+				margin-top: 30px;
+				color: white;
+
+				.form{
+					background-color: transparent;
+					display: grid;
+					padding: 120px 80px;
+
+
+					.div-inp-name{
+						position: relative;
+					
+						.fa{
+							color: white;
+							position: absolute;
+  							padding: 10px;
+  							top: 5px;
+  							pointer-events: none;
+						}
+
+						.left-addon .fa {
+  							left: 0px;
+						}
+
+						.inp-name{
+							background-color: transparent;
+							padding: 10px 15px;
+							margin-bottom: 10px;
+							width: 100%;
+							padding-left: 30px;
+							border-radius: 2px;
+							border: none;
+							color: gray;
+							border-bottom: 1px solid white;
+						}
+
+						.inp-name:focus{
+							outline: none;
+							background-color: white;
+							transition: .4s linear 0.2s;
+						}
+
+						#label-name-alert{
+							display: none;
+						}
+
+						#label-email-alert{
+							display: none;
+						}
+					}
+
+					.div-inp-pass{
+						position: relative;
+					
+						.fa{
+							color: white;
+							position: absolute;
+	  						padding: 10px;
+	  						pointer-events: none;
+	  						top: 5px;
+						}
+
+						.left-addon .fa {
+	  						left: 0px;
+						}
+
+						.inp-pass{
+							background-color: transparent;
+							padding: 10px 15px;
+							width: 100%;
+							padding-left: 30px;
+							border-radius: 2px;
+							border: none;
+							color: gray;
+							border-bottom: 1px solid white;
+							margin-bottom: 10px;
+						}
+
+						.inp-confirmpass{
+							background-color: transparent;
+							padding: 10px 15px;
+							width: 100%;
+							padding-left: 30px;
+							border-radius: 2px;
+							border: none;
+							color: gray;
+							border-bottom: 1px solid white;
+							margin-bottom: 10px;
+						}
+
+						.inp-pass:focus, .inp-confirmpass:focus{
+							outline:none;
+							background-color: white;
+							transition: .4s linear 0.2s;
+						}
+
+						#label-pass-alert{
+							display: none;
+						}
+
+						#label-confirmpass-alert{
+							display: none;
+						}
+					}
+
+					.form-btn{
+						.btn-login{
+							padding: 10px 20px;
+							border: 3px solid #5fa941;
+							background-color: #5fa941;
+							cursor: pointer;
+							transition: .4s linear 0.2s;
+							width: 100%;
+							display: inline-block;
+							text-align: center;
+							margin-top: 50px;
+							border-radius: 50px;
+							color: white;
+						}
+
+						.btn-login:hover{
+							opacity: .92;
+						}
+
+						.btn-login:focus{
+							outline: none;
+						}
+					}
+
+					.social-btn{
+						display: flex;
+						margin-top: 40px;
+
+						.btn-facebook{
+							outline: none;
+							width: 50%;
+							border: none;
+							border-radius: 50px;
+							background-color: #3949AB;
+							font-size: 16px;
+							color: white;
+							padding: 15px 20px;
+						}
+
+						a{
+							color: white;
+							text-decoration: none;
+						}
+
+						.btn-google{
+							outline: none;
+							margin-left: 5px;
+							border: none;
+							border-radius: 50px;
+							background-color: #ea4335;
+							color: white;
+							font-size: 16px;
+							padding: 15px 20px;
+							width: 50%;
+						}
+					}
+
+					.a-createacc{
+						margin-bottom: 20px;
+						width: 100%;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.form{
+		padding: 0;
+	}
+}
+
+.mostrar{
+	display: block;
+}
