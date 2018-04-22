@@ -398,7 +398,9 @@
           padding: 15px 20px;
           width: 50%; }
       .modal .center .modal-content .modal-body .form .a-createacc {
-        margin-bottom: 20px;
+        position: relative;
+        top: 50px;
+        bottom: 0;
         width: 100%;
         text-align: center; }
 

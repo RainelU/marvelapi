@@ -10,6 +10,7 @@ let divPass = document.getElementById("div-label-pass");
 let divConfirmPass = document.getElementById("div-label-confirmpass");
 
 		/********* LOG IN FORM**********/
+let modalLogin = document.getElementById("Login")
 let nameLogin = document.getElementById("name-login");
 let passLogin = document.getElementById("pass-login");
 
@@ -140,6 +141,9 @@ BTN_LOGIN.addEventListener('click', function(e){
 
 		e.preventDefault();
 	}else{
+		divNameLogin.innerHTML = `
+		`;
+
 		divWelcomeAdmin.style.width = "100%";
 		divWelcomeAdmin.style.textAlign = "center";
 		divWelcomeAdmin.innerHTML = `
@@ -147,6 +151,8 @@ BTN_LOGIN.addEventListener('click', function(e){
 				Bienvenido, ADMINISTRADOR Rainel.
 			</span>
 		`;
+
+		e.preventDefault();
 	}
 
 	if (!/^\S/.test(passLogin.value)) {
@@ -164,4 +170,10 @@ BTN_LOGIN.addEventListener('click', function(e){
 	}else{
 		divPassLogin.innerHTML = "";
 	}
+});
+
+let pasedLogin = document.querySelector("#a-event");
+
+pasedLogin.addEventListener('click', function(){
+	modalLogin.style.opacity = "0";
 });
