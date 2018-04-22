@@ -4344,11 +4344,12 @@ var Modal = function ($$$1) {
   };
   var ClassName = {
     SCROLLBAR_MEASURER: 'modal-scrollbar-measure',
-    BACKDROP: 'modal-backdrop',
     OPEN: 'modal-open',
     FADE: 'fade',
     SHOW: 'show'
   };
+
+
   var Selector = {
     DIALOG: '.modal-dialog',
     DATA_TOGGLE: '[data-toggle="modal"]',

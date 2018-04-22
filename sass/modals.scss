@@ -1,6 +1,8 @@
 .modal{
+	background-color: rgba(0,0,0,0.66);
+
 	.modal-dialog {
-		margin-top:0;
+		margin-top: 10px;
 		position: relative;
 		width: 100%;
 		pointer-events: none;
@@ -196,10 +198,17 @@
 					}
 
 					.a-createacc{
+						color: white;
+						padding: 10px;
+						font-size: 15px;
+						background: #B71C1C;
+						border-radius: 5px;
 						position: relative;
-						top: 50px;
+						left: 50%;
+						transform: translateX(-50%);
+						top: 40px;
 						bottom: 0;
-						width: 100%;
+						width: 50%;
 						text-align: center;
 					}
 				}

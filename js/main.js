@@ -17,6 +17,11 @@ let passLogin = document.getElementById("pass-login");
 let divNameLogin = document.getElementById("div-name-login");
 let divPassLogin = document.getElementById("div-pass-login");
 let divWelcomeAdmin = document.getElementById("welcome-admin");
+let iconLU = document.getElementById("i-user-login");
+let iconPU = document.getElementById("i-pass-login")
+
+		/**** <a> TRANSITIONS ***/
+let pasedLogin = document.querySelector("#a-event");
 
 const BTN_LOGIN = document.getElementById("btn-login");
 const BTN_REGISTER = document.getElementById("btn-register");
@@ -172,8 +177,14 @@ BTN_LOGIN.addEventListener('click', function(e){
 	}
 });
 
-let pasedLogin = document.querySelector("#a-event");
-
 pasedLogin.addEventListener('click', function(){
-	modalLogin.style.opacity = "0";
+	modalLogin.style.display = "none";
+});
+
+nameLogin.addEventListener('click', function(){
+	iconLU.style.color = "grey";
+});
+
+passLogin.addEventListener('click', function(){
+	iconPU.style.color = "grey";
 });

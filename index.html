@@ -99,7 +99,7 @@
 	<div class="modal fade" id="Register" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog center" role="document">
 			<div class="modal-content">
-				<button type="button" class="close X-close" data-dismiss="modal" aria-label="Close">
+				<button id="btn-X" stype="button" class="close X-close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 
@@ -140,7 +140,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="modal fade"id="Login" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal fade" id="Login" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog center" role="document">
               <div class="modal-content">
                   <button type="button" class="close X-close" data-dismiss="modal" aria-label="Close">
@@ -150,12 +150,12 @@
                 	<div id="welcome-admin"></div>
                   <form class="form" role="form">
                   	<div class="div-inp-name left-addon" style="display: flex; flex-wrap: wrap;">
-        				<i class="fa fa-user i-conf"></i>
+        				<i id="i-user-login" class="fa fa-user i-conf"></i>
                   		<input type="text" placeholder="Ingress name..." class="inp-name" id="name-login">
                   		<div id="div-name-login"></div>
                   	</div>
                   	<div class="div-inp-pass left-addon">
-                  		<i class="fa fa-key"></i>
+                  		<i id="i-pass-login" class="fa fa-key"></i>
                   		<input type="password" placeholder="Ingress password..." class="inp-pass" id="pass-login">
                   		<div id="div-pass-login"></div>
                   	</div>
@@ -173,7 +173,7 @@
             </div>
           </div>
 	<script src="./bootstrap/js/jquery-3.3.1.min.js"></script>
-	<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./bootstrap/js/bootstrap.bundle.js"></script>
 	<script src="./bootstrap/js/popper.min.js"></script>
 	<script src="./js/main.js"></script>
 </body>
