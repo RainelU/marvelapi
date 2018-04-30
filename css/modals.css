@@ -2,7 +2,6 @@
   background-color: rgba(0, 0, 0, 0.66); }
   .modal .modal-dialog {
     margin-top: 10px;
-    position: relative;
     width: 100%;
     pointer-events: none; }
   .modal .modal.fade .modal-dialog {
@@ -13,7 +12,6 @@
     transform: translate(0, 0%); }
   .modal .center .modal-content {
     box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.5);
-    border-radius: 10%;
     font-family: sans;
     background-color: #1f1f2c; }
     .modal .center .modal-content .X-close {
@@ -27,10 +25,13 @@
     .modal .center .modal-content .modal-body {
       margin-top: 30px;
       color: white; }
+      .modal .center .modal-content .modal-body .welcome-admin {
+        position: absolute;
+        top: 0; }
       .modal .center .modal-content .modal-body .form {
         background-color: transparent;
         display: grid;
-        padding: 120px 80px; }
+        padding: 50px 50px; }
         .modal .center .modal-content .modal-body .form .div-inp-name {
           position: relative; }
           .modal .center .modal-content .modal-body .form .div-inp-name .fa {
@@ -97,6 +98,40 @@
             display: none; }
           .modal .center .modal-content .modal-body .form .div-inp-pass #label-confirmpass-alert {
             display: none; }
+        .modal .center .modal-content .modal-body .form .div-checkbox {
+          padding: 10px 10px 0px 10px;
+          text-align: center; }
+        .modal .center .modal-content .modal-body .form .div-checkbox input[type="checkbox"] {
+          display: none; }
+        .modal .center .modal-content .modal-body .form .div-checkbox label {
+          padding: 5px 15px 5px 51px;
+          display: inline-block;
+          position: relative;
+          font-size: .8em;
+          border-radius: 3px;
+          cursor: pointer;
+          text-align: center;
+          -webkit-transition: all .4s ease;
+          -o-transition: all .4s ease;
+          transition: all .4s ease; }
+        .modal .center .modal-content .modal-body .form .div-checkbox label:hover {
+          background-color: rgba(0, 116, 217, 0.2); }
+        .modal .center .modal-content .modal-body .form .div-checkbox label:before {
+          content: "";
+          width: 17px;
+          height: 17px;
+          background-color: none;
+          display: inline-block;
+          border: 3px solid #5fa941;
+          border-radius: 4px;
+          position: absolute;
+          left: 17px; }
+        .modal .center .modal-content .modal-body .form .div-checkbox input[type="checkbox"]:checked + label {
+          padding: 5px 15px;
+          background-color: #5fa941;
+          color: white; }
+        .modal .center .modal-content .modal-body .form .div-checkbox input[type="checkbox"]:checked + label:before {
+          display: none; }
         .modal .center .modal-content .modal-body .form .form-btn .btn-login {
           padding: 10px 20px;
           border: 3px solid #5fa941;
@@ -118,9 +153,8 @@
           margin-top: 40px; }
           .modal .center .modal-content .modal-body .form .social-btn .btn-facebook {
             outline: none;
-            width: 50%;
+            width: 100%;
             border: none;
-            border-radius: 50px;
             background-color: #3949AB;
             font-size: 16px;
             color: white;
@@ -130,14 +164,12 @@
             text-decoration: none; }
           .modal .center .modal-content .modal-body .form .social-btn .btn-google {
             outline: none;
-            margin-left: 5px;
             border: none;
-            border-radius: 50px;
             background-color: #ea4335;
             color: white;
             font-size: 16px;
             padding: 15px 20px;
-            width: 50%; }
+            width: 100%; }
         .modal .center .modal-content .modal-body .form .a-createacc {
           color: white;
           padding: 10px;
@@ -152,10 +184,47 @@
           width: 50%;
           text-align: center; }
 
-@media screen and (max-width: 500px) {
-  .form {
-    padding: 0; } }
-.mostrar {
-  display: block; }
+#container-search {
+  text-align: center; }
+
+.a-config {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 0px 20px;
+  border-bottom: 1px solid white;
+  color: white;
+  text-decoration: none; }
+
+.a-config:hover {
+  color: white;
+  text-decoration: none; }
+
+.img-config {
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 150px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: .2s ease;
+  border: 5px solid #881212;
+  margin-bottom: 40px; }
+
+.img-config:hover {
+  border-radius: 50%;
+  border: 5px solid #3c0505; }
+
+@media screen and (max-width: 800px) {
+  .social-btn {
+    display: flex;
+    flex-direction: column; }
+    .social-btn .btn-facebook {
+      width: 100%; }
+    .social-btn .btn-google {
+      margin-top: 20px;
+      width: 100%; } }
 
 /*# sourceMappingURL=modals.css.map */

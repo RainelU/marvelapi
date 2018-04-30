@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Series Marvel API</title>
+	<link rel="shortcut icon" type="text/css" href="./img/Mattahan-Ultrabuuf-Comics-Captain-America-Shield.ico">
+	<link rel="stylesheet" type="text/css" href="./css/import.css">
+	<link rel="stylesheet" type="text/css" href="./css/import-series.css">
+	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="http://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/sticky-footer-navbar.css">
+	<link rel="stylesheet" href="./alertify/default.min.css"/>
+	<link rel="stylesheet" href="./alertify/alertify.min.css"/>
+</head>
+<body>
+	<div class="bodychild">
+		<div id="div-btn-under">
+			<button class="btn-under" id="btn-under"><i class="fa fa-chevron-up"></i></button>
+		</div>
+		<div id="contenedor_carga">
+			<img src="./img/marvel.svg" id="logo"></img>
+			<div id="carga"></div>
+		</div>
+		<div class="bodycontainer" style="background-color: #cc1617;">
+			<div class="nav-top">
+				<div class="marvel-logo">
+					<img src="./img/marvel.svg" width="200" height="80">
+				</div>
+			</div>
+			<div class="neightbor">
+				<nav class="navbar navbar-expand-lg bg-light">
+					<div class="navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">More Us</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="container-fluid container">
+				<div class="row padding">
+					<div class="col-sm-4 margin-top" id="imageonerow">
+						
+					</div>
+					<div class="col-sm-4 margin-top" id="imagetworow">
+						
+					</div>
+					<div class="col-sm-4 margin-top" id="imagethreerow">
+						
+					</div>
+				</div>
+			</div>
+			<div id="ajax-loading" style="display: none;">
+				<h1>Loading...</h1>
+			</div>
+			<footer class="footer" style="background: #fff;padding:10px;">
+		      <div class="container">
+		        <span class="text-muted">MARVEL</span>
+		      </div>
+		    </footer>
+		</div>
+	</div>
+
+	<script src="./bootstrap/js/jquery-3.3.1.min.js"></script>
+	<script src="./bootstrap/js/bootstrap.bundle.js"></script>
+	<script src="./bootstrap/js/popper.min.js"></script>
+	<script src="./js/mainSeries.js"></script>
+	<script src="./alertify/alertify.min.js"></script>
+</body>
+</html>

@@ -1,11 +1,9 @@
-*{
-	padding: 0;
-	margin: 0;
-}
-
-@import './header.scss';
-@import './header-login.scss';
 @import './nav-top.scss';
 @import './navbar.scss';
+@import './header.scss';
+@import './aboutUs.scss';
+@import './header-animation.scss';
 @import './modals.scss';
-@import './space.scss';
+@import './carga.scss';
+@import './root.scss';
+@import './btn-under.scss';

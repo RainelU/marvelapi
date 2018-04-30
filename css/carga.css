@@ -1,0 +1,46 @@
+/*****************************
+			CARGA
+****************************/
+#contenedor_carga {
+  background-color: #021223;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  transition: all 1s ease;
+  z-index: 10; }
+
+#logo {
+  width: 300px;
+  position: relative;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+  height: 500px;
+  margin: auto; }
+
+#carga {
+  border-top: 2px;
+  border-top-color: #f0351d;
+  border-top-style: ridge;
+  height: 100px;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-animation: girar 2s linear infinite;
+  -o-animation: girar 2s linear infinite;
+  animation: girar 2s linear infinite; }
+
+@keyframes girar {
+  from {
+    width: 0; }
+  to {
+    width: 50%; } }
+/**************************
+	FINAL DE CARGA
+************************/
+
+/*# sourceMappingURL=carga.css.map */

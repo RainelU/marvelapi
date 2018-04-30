@@ -152,7 +152,7 @@ BTN_LOGIN.addEventListener('click', function(e){
 		divWelcomeAdmin.style.width = "100%";
 		divWelcomeAdmin.style.textAlign = "center";
 		divWelcomeAdmin.innerHTML = `
-			<span style='width:100%;text-aling:center;position:relative;top:100px;text-transform:uppercase;color:green;'>
+			<span style='width:100%;text-aling:center;position:relative;text-transform:uppercase;color:#5fa941;'>
 				Bienvenido, ADMINISTRADOR Rainel.
 			</span>
 		`;
@@ -178,7 +178,7 @@ BTN_LOGIN.addEventListener('click', function(e){
 });
 
 pasedLogin.addEventListener('click', function(){
-	modalLogin.style.display = "none";
+	$('#Login').modal('toggle');
 });
 
 nameLogin.addEventListener('click', function(){
@@ -187,4 +187,117 @@ nameLogin.addEventListener('click', function(){
 
 passLogin.addEventListener('click', function(){
 	iconPU.style.color = "grey";
+});
+
+/****** FINAL DE LA VALIDACIÓN DE LOS LOGIN'S Y REGISTER *******/
+
+const URL = "http://gateway.marvel.com/v1/public/characters?ts=1&apikey=2a376b9caa79d2a09aa7815eb679dbd0&hash=6a52d9b444c4ea46c9a0f4cbb3999b57";
+
+let container = document.getElementById("container-search");
+let imgContainer = document.querySelector("img-search");
+const INPUT_SEARCH = document.querySelector("#search-input");
+const BTN_SEARCH = document.querySelector("#search-btn"); 
+
+fetch(URL)
+.then(function(r){
+	return r.json();
+}).then(function(json){
+	let arrayName = [];
+	for (var i = 0; i < json.data.results.length; i++) {
+		let element = json.data.results[i];
+		let elementName = element;
+
+		arrayName.push(elementName);
+	}
+
+	const BTN_ALL = document.querySelector("#all-btn");
+	BTN_ALL.addEventListener("click", function(e){
+		e.preventDefault();
+		container.innerHTML = "";
+		for (var t = 0; t < arrayName.length; t++) {
+			let item = arrayName[t];
+			$('#Search').modal('show');
+			container.innerHTML += `
+				<a class="a-config" href="${item.thumbnail.path}/landscape_medium.jpg">${item.name}</a>
+			`;
+
+			let a = document.createElement("a");
+			let img = document.createElement("img");
+				
+			a.appendChild(img);
+			a.href = `${item.urls[0].url}`;
+			container.appendChild(a);
+
+			img.src = `${item.thumbnail.path}/landscape_medium.jpg`;
+			img.className = "img-config";
+		}
+	});
+
+	BTN_SEARCH.addEventListener("click", function r(e){
+		container.innerHTML = "";
+		e.preventDefault();
+		for (var j = 0; j < arrayName.length; j++) {
+			let item = arrayName[j];
+			if(INPUT_SEARCH.value.length <= 0){
+				return false;
+			}else if (item.name.search(INPUT_SEARCH.value) != -1) {
+				$('#Search').modal('show');
+				container.innerHTML += `
+					<a class="a-config">${item.name}</a>
+				`;
+
+				let a = document.createElement("a");
+				let img = document.createElement("img");
+				
+				a.appendChild(img);
+				a.href = `${item.urls[0].url}`;
+				container.appendChild(a);
+
+				img.src = `${item.thumbnail.path}/landscape_medium.jpg`;
+				img.className = "img-config";
+			}
+		}
+	});
+}).catch(function(error){
+	alertify.error("No es posible establecer conexión a internet");
+}).catch(function(success){
+	alertify.success("Conexión Establecida");
+});
+
+
+BTN_SEARCH.addEventListener("click", function(e){
+	if (!/^\S/.test(INPUT_SEARCH.value)) {
+		alertify.error("Ingresa un valor");
+		return false;
+
+		$('#Search').modal('dispose');
+		$('#Search').style.display = "none";
+		$('#Search').style.visibility = "hidden";
+
+	}
+});
+
+window.onload = function(){
+	var contenedor = document.getElementById("contenedor_carga");
+	contenedor.style.visibility = "hidden";
+	contenedor.style.opacity = "0";
+	contenedor.style.zIndex = "-5000";
+};
+
+const BTN_UNDER = document.querySelector("#btn-under");
+
+$(document).ready(function(){
+	$('#btn-under').click(function(){
+		$('body, html').animate({
+			scrollTop: "0px"
+		}, 1000);
+
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 0) {
+				$('#btn-under').slideDown(500);
+			}else{
+				$('#btn-under').slideUp(500);
+			}
+		});
+	});
 });

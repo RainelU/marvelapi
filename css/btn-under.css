@@ -1,0 +1,17 @@
+#div-btn-under #btn-under {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #14212d;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0px 1px 12px 1px rgba(0, 0, 0, 0.54);
+  outline: none;
+  cursor: pointer;
+  z-index: 5; }
+#div-btn-under i {
+  font-size: 20px; }
+
+/*# sourceMappingURL=btn-under.css.map */

@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta charset="UTF-8">
 	<title>Marvel API</title>
 	<link rel="shortcut icon" type="text/css" href="./img/Mattahan-Ultrabuuf-Comics-Captain-America-Shield.ico">
 	<link rel="stylesheet" type="text/css" href="./css/import.css">
 	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="http://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/sticky-footer-navbar.css">
+	<link rel="stylesheet" href="./alertify/default.min.css"/>
+	<link rel="stylesheet" href="./alertify/alertify.min.css"/>
 </head>
 <body>
 	<div class="bodychild">
+		<div id="div-btn-under">
+			<button class="btn-under" id="btn-under"><i class="fa fa-chevron-up"></i></button>
+		</div>
+		<div id="contenedor_carga">
+			<img src="./img/marvel.svg" id="logo"></img>
+			<div id="carga"></div>
+		</div>
 		<div class="bodycontainer">
 			<div class="nav-top">
 				<div class="marvel-logo">
@@ -17,8 +28,8 @@
 				</div>
 			</div>
 			<div class="neightbor">
-				<nav class="navbar navbar-expand-lg navbar-light bg-light fixed">
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<nav class="navbar navbar-expand-lg bg-light">
+					<div class="navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav mr-auto">
 							<li class="nav-item active">
 								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -31,16 +42,15 @@
 									Interactive
 								</a>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="#">Series</a>
-									<a class="dropdown-item" href="#">Movies</a>
-									<a class="dropdown-item" href="#">Forum</a>
+									<a class="dropdown-item btn-dark item-config" href="./series.html">Series</a>
 								</div>
 							</li>
 						</ul>
-						<form class="form-inline my-2 my-lg-0">
-							<input class="form-control mr-sm-2 input" type="search" placeholder="Search" aria-label="Search">
-							<button class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
-						</form>
+						<div class="form-inline my-2 my-lg-0">
+								<input class="form-control mr-sm-2 input" type="search" placeholder="Search Characters.." aria-label="Search" id="search-input">
+								<button class="btn btn-dark my-2 my-sm-0" type="submit" id="search-btn">Search</button>
+								<button class="btn btn-danger my-2 my-sm-0" type="submit" id="all-btn" style="margin-left: 10px;">All</button>
+						</div>
 					</div>
 				</nav>
 			</div>
@@ -53,7 +63,7 @@
 						<span>THE WORLD OF COMIC'S</span>
 						<br>
 						<div class="flex">	
-							<button><label>Read more</label></button>
+							<button class="read-more"><label>Read more</label></button>
 							<div class="btn-flex">
 								<button class="btn-register" data-toggle="modal" data-target="#Register">
 									SIGN UP
@@ -69,15 +79,15 @@
 			<div class="container-fluid container">
 				<div class="row padding">
 					<div class="col-sm-4 margin-top">
-						<h2>¡Bienvenido!</h2>
-						<p>Acerca de nosotros somos una gama de desarrolladores web (nuestro fuerte), empleados para mejor interactividad en el Desarrollo.</p>
+						<h2 id="welcome-h2">¡Bienvenido!</h2>
+						<p>Acerca de nosotros: somos una gama de desarrolladores web (nuestro fuerte), empleados para mejor interactividad en el Desarrollo.</p>
 					</div>
 					<div class="col-sm-4 margin-top">
 						<h2>¡Asombra!</h2>
 						<p>Tenemos un proyecto basado en la interactividad y estilo en el que daremos a una página, espero te guste como esté quedando esta page.</p>
 					</div>
 					<div class="col-sm-4 margin-top">
-						<h2>¡Responsivo!</h2>
+						<h2 id="responsive-h2">¡Responsivo!</h2>
 						<p> Es adaptable a todo teléfono móvil, sea cual sea el tamaño de su pantalla. Será compatible. Así tendrémos mayor gama en visitas.</p>
 					</div>
 				</div>
@@ -93,8 +103,14 @@
 					</div>
 				</div>
 			</div>
+			<footer class="footer">
+		      <div class="container navbar">
+		        <span class="text-muted navbar">MARVEL</span>
+		      </div>
+		    </footer>
 		</div>
 	</div>
+</div>
 
 	<div class="modal fade" id="Register" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog center" role="document">
@@ -126,6 +142,10 @@
 							<i class="fa fa-key"></i>
 							<input type="password" placeholder="Confirm Password" id="confirmpass-reg" name="confirmpass-reg" class="inp-confirmpass" required>
 							<div id="div-label-confirmpass"></div>
+						</div>
+						<div class="div-checkbox">
+							<input type="checkbox" name="checkbox" id="acept" required>
+							<label for="acept">Acepto los términos y las condiciones</label>
 						</div>
 						<div class="form-btn">
 							<button class="btn-login" id="btn-register">CREATE ACCOUNT</button>
@@ -172,9 +192,23 @@
               </div>
             </div>
           </div>
+
+    <div class="modal fade" id="Search" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog center color-marvel" style="background-color: #cc1617;" role="document">
+			<div class="modal-content" style="background-color: #cc1617;border-radius: 0;">
+				<button id="btn-X" stype="button" class="close X-close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true" style="color: black;">&times;</span>
+				</button>
+
+				<div class="modal-body" style="background-color: #cc1617;" id="container-search">
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="./bootstrap/js/jquery-3.3.1.min.js"></script>
 	<script src="./bootstrap/js/bootstrap.bundle.js"></script>
 	<script src="./bootstrap/js/popper.min.js"></script>
 	<script src="./js/main.js"></script>
+	<script src="./alertify/alertify.min.js"></script>
 </body>
 </html>

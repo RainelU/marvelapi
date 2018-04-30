@@ -3,7 +3,6 @@
 
 	.modal-dialog {
 		margin-top: 10px;
-		position: relative;
 		width: 100%;
 		pointer-events: none;
 	}
@@ -15,12 +14,11 @@
 		-webkit-transform: translate(0, 0%);
 		transform: translate(0, 0%);
 	}
-
+	
 	.center{
-
+		
 		.modal-content{
 			box-shadow: 0px 1px 20px 1px rgba(0,0,0,0.50);
-			border-radius: 10%; 
 			font-family: sans;
 			background-color: rgba(31,31,44,1);
 
@@ -38,11 +36,15 @@
 				margin-top: 30px;
 				color: white;
 
+				.welcome-admin{
+					position: absolute;
+					top: 0;
+				}
+
 				.form{
 					background-color: transparent;
 					display: grid;
-					padding: 120px 80px;
-
+					padding: 50px 50px;
 
 					.div-inp-name{
 						position: relative;
@@ -140,6 +142,54 @@
 						}
 					}
 
+					.div-checkbox{
+						padding: 10px 10px 0px 10px;
+						text-align: center;
+					}
+
+					.div-checkbox input[type="checkbox"]{
+						display: none;
+					}
+
+					.div-checkbox label{
+						padding: 5px 15px 5px 51px;
+						display: inline-block;
+						position: relative;
+						font-size: .8em;
+						border-radius: 3px;
+						cursor: pointer;
+						text-align: center;
+						-webkit-transition: all .4s ease;
+						-o-transition: all .4s ease;
+						transition: all .4s ease;
+					}
+					
+					.div-checkbox label:hover{
+						background-color: rgba(0,116,217,0.2);
+					}
+
+					.div-checkbox label:before{
+						content: "";
+						width: 17px;
+						height: 17px;
+						background-color: none;
+						display: inline-block;
+						border: 3px solid #5fa941;
+						border-radius: 4px;
+						position: absolute;
+						left: 17px;
+					}
+
+					.div-checkbox input[type="checkbox"]:checked + label{
+						padding: 5px 15px;
+						background-color: #5fa941;
+						color: white;
+					}
+
+					.div-checkbox input[type="checkbox"]:checked + label:before{
+						display: none;
+					}
+
 					.form-btn{
 						.btn-login{
 							padding: 10px 20px;
@@ -170,9 +220,9 @@
 
 						.btn-facebook{
 							outline: none;
-							width: 50%;
+							width: 100%;
 							border: none;
-							border-radius: 50px;
+
 							background-color: #3949AB;
 							font-size: 16px;
 							color: white;
@@ -186,14 +236,13 @@
 
 						.btn-google{
 							outline: none;
-							margin-left: 5px;
 							border: none;
-							border-radius: 50px;
+
 							background-color: #ea4335;
 							color: white;
 							font-size: 16px;
 							padding: 15px 20px;
-							width: 50%;
+							width: 100%;
 						}
 					}
 
@@ -217,12 +266,56 @@
 	}
 }
 
-@media screen and (max-width: 500px) {
-	.form{
-		padding: 0;
-	}
+#container-search{
+	text-align: center;
 }
 
-.mostrar{
+.a-config{
+	display: inline-block;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 0px 20px;
+	border-bottom: 1px solid white;
+	color: white;
+	text-decoration: none;
+}
+
+.a-config:hover{
+	color: white;
+	text-decoration: none;
+}
+
+.img-config{
 	display: block;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 150px;
+	width: 150px;
+	cursor: pointer;
+	border-radius: 50%;
+	transition: .2s ease;
+	border: 5px solid #881212;
+	margin-bottom: 40px;
+}
+
+.img-config:hover{
+	border-radius: 50%;
+	border: 5px solid #3c0505;
+}
+
+@media screen and (max-width: 800px) {
+	.social-btn{
+		display: flex;
+		flex-direction: column;
+
+		.btn-facebook{
+			width: 100%;
+		}
+
+		.btn-google{
+			margin-top: 20px;
+			width: 100%;
+		}
+	}
 }
